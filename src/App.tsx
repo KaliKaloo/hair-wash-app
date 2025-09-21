@@ -64,11 +64,12 @@ function App() {
                   <button
                     className="text-xl font-medium text-black dark:text-white"
                     onClick={() => {
-                      localStorage.setItem(
-                        LAST_WASHED_TIMESTAMP_KEY,
-                        Date.now().toString()
-                      );
-                      setWashedHairToday(true);
+                      if (confirm("Are you sure?")) {
+                        localStorage.setItem(
+                          LAST_WASHED_TIMESTAMP_KEY,
+                          Date.now().toString()
+                        );
+                      }
                     }}
                   >
                     Ok, I will wash my hair today
