@@ -48,7 +48,7 @@ function App() {
   });
 
   if (washedHairToday) {
-    return <h2>You've already washed your hair today</h2>;
+    return <h2>You've confirmed that you will wash your hair today!</h2>;
   }
 
   return (
